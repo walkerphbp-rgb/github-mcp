@@ -1,0 +1,30 @@
+{
+  "name": "github-mcp",
+  "version": "1.0.0",
+  "description": "Read-only GitHub MCP connector (Render)",
+  "main": "src/main.ts",
+  "scripts": {
+    "typecheck": "tsc",
+    "test": "vitest run",
+    "build": "esbuild src/main.ts --bundle --platform=node --format=cjs --target=node22 --minify --outfile=dist/main.cjs",
+    "start": "node dist/main.cjs"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.32.2",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.6",
+    "esbuild": "^0.28.2",
+    "typescript": "^7.0.2",
+    "vitest": "^5.1.1"
+  },
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  }
+}
